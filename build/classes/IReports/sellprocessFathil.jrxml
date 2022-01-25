@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="698f1ab5-d5ad-4f1e-91cd-59d0dd7d20e7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Table Dataset 1" uuid="edd6a1ff-0a38-4f61-b30a-f7f4c11192ea"/>
+	<parameter name="CName" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="sellID" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `MName`, `Num`, `Price`, `Quantity`,Price*Num AS "Total" FROM `sellprocess`]]>
+	</queryString>
+	<field name="MName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Num" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle radius="8">
+				<reportElement x="44" y="0" width="465" height="35" uuid="4c23fcc2-0857-4f87-8b05-791f8909641b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="44" y="0" width="465" height="35" uuid="4293472e-3d12-48c2-a0eb-87834ecd4072"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[البصرة - القرنة - مدخل السوق - 07703274955 - 07702783194 ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="92" splitType="Stretch">
+			<rectangle radius="8">
+				<reportElement x="0" y="0" width="555" height="61" uuid="067fae02-96e4-4337-b2ff-5d836d045041"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="495" y="0" width="60" height="30" uuid="4822add1-08f8-47ac-9f2d-713cfe51058f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[التاريخ]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="349" y="0" width="146" height="30" uuid="0e86853d-dddb-41a0-8cd8-dab1ae305bd4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="478" y="30" width="77" height="31" uuid="d87a8761-2758-4d3f-9fa0-2d42635cdfc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[حضرة السيد :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="30" width="39" height="31" uuid="a1d62e6c-d5f9-4d8b-afcf-6717f66a4b1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المحترم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="30" width="53" height="31" uuid="5f6d43cc-6b65-46cb-9e4c-2a7f3778f723"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/ العنوان: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="92" height="30" uuid="499121f3-fc79-4334-a19d-2950a7639ba9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم الوصل :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="530" y="66" width="25" height="21" forecolor="#000000" backcolor="#FFFFFF" uuid="48ea3107-07ea-431a-b44b-863474f75557"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ت]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="66" width="100" height="21" forecolor="#000000" backcolor="#FFFFFF" uuid="9e029772-ff69-442e-9c0a-ac4d09d5e9fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المبلغ الكلي]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="66" width="238" height="21" forecolor="#000000" backcolor="#FFFFFF" uuid="a4aeb224-232d-4bac-a304-cf3ee6966812"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[التفاصيل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="66" width="53" height="21" forecolor="#000000" backcolor="#FFFFFF" uuid="cbce73f2-29c6-4572-ab4a-24aa0a3accc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[العدد]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="66" width="139" height="21" forecolor="#000000" backcolor="#FFFFFF" uuid="8c01983e-bff2-4b8b-831d-2043b5cefce0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[سعر المفرد]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="257" y="30" width="221" height="31" uuid="64f1bcbc-6b76-4630-b5b7-ee548a1d8781"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="165" height="31" uuid="84c668d8-8017-462c-ae33-ed4e89056514"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Address} ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="165" height="30" uuid="9a67363a-2997-42d4-9a8c-a5767ea46885"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sellID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="530" y="0" width="25" height="20" uuid="e885f1da-161b-4eac-81cc-79530e8f7990"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="430" y="0" width="100" height="20" uuid="b1500686-97d6-4521-8f21-e5501e28e4c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="238" height="20" uuid="feb34679-1683-4837-8cf4-1a73e582ca97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="53" height="20" uuid="3f184a46-f005-4abd-9a79-88ab2d3c1d09"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="139" height="20" uuid="9c530b7d-b2b2-48fd-8b85-b2de98dc94c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="478" y="0" width="77" height="54" uuid="aa308d62-caa2-4ddc-a028-22292e6c4e50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المجموع :]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="478" height="54" uuid="ea7fabd0-4eb1-4dff-8ae8-e4a95c3925e7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="0" width="155" height="42" uuid="5110672e-b3ab-4f4d-971f-685187ccaa9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الخطأ والسهو مرجوع للطرفين]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="0" width="51" height="42" uuid="878b642a-233e-4f74-bf33-c36a81170511"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[التوقيع :]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
