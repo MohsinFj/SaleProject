@@ -14,6 +14,8 @@ import sql.go;
  */
 public class AddClinet extends javax.swing.JFrame {
 
+	// test
+
     /**
      * Creates new form AddClinte
      */
